@@ -32,6 +32,11 @@ spec:
         kubeScheduler: false
     grafana:
       enabled: true
+      persistence:
+        enabled: true
+        storageClassName: do-block-storage
+        accessModes: [ "ReadWriteOnce" ]
+        size: 5Gi
     kubeEtcd:
       enabled: false
     kubeScheduler:

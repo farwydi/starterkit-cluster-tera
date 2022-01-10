@@ -31,3 +31,13 @@ spec:
       requests:
         cpu: 200m
         memory: 200Mi
+    service:
+      type: LoadBalancer
+      annotations:
+        # Enable proxy protocol
+        service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
+        # Specify whether the DigitalOcean Load Balancer should pass encrypted data to backend droplets
+        service.beta.kubernetes.io/do-loadbalancer-tls-passthrough: "true"
+        # You can keep your existing LB when migrating to a new DOKS cluster, or when reinstalling AES
+        kubernetes.digitalocean.com/load-balancer-id: "6e4904e0-bfdb-462b-865a-1814d59ed0da"
+        service.kubernetes.io/do-loadbalancer-disown: false
