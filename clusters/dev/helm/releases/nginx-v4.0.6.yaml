@@ -29,3 +29,10 @@ spec:
         requests:
           cpu: 100m
           memory: 90Mi
+      service:
+        type: LoadBalancer
+        annotations:
+          # Enable proxy protocol
+          service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
+          # Specify whether the DigitalOcean Load Balancer should pass encrypted data to backend droplets
+          service.beta.kubernetes.io/do-loadbalancer-tls-passthrough: "true"
