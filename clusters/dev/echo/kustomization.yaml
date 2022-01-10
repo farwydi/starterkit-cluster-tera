@@ -8,4 +8,5 @@ resources:
   - echo_host_nginx.yaml
   - echo_deployment.yaml
   - echo_service.yaml
+  - cert-manager-nginx-issuer.yaml
   - echo-ns.yaml

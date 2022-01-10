@@ -8,4 +8,5 @@ resources:
   - quote_host_nginx.yaml
   - quote_deployment.yaml
   - quote_service.yaml
+  - cert-manager-nginx-issuer.yaml
   - quote-ns.yaml
