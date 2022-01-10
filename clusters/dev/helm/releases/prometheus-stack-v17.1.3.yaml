@@ -44,15 +44,6 @@ spec:
     prometheus:
       enabled: true
       additionalServiceMonitors:
-        - name: "ambassador-monitor"
-          selector:
-            matchLabels:
-              service: "ambassador-admin"
-          namespaceSelector:
-            matchNames:
-              - ambassador
-          endpoints:
-            - port: "ambassador-admin"
         - name: "loki-monitor"
           selector:
             matchLabels:
