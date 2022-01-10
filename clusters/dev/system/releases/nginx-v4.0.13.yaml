@@ -32,11 +32,5 @@ spec:
       service:
         type: LoadBalancer
         annotations:
-          # Enable proxy protocol
-          service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"
-          # Specify whether the DigitalOcean Load Balancer should pass encrypted data to backend droplets
-          service.beta.kubernetes.io/do-loadbalancer-tls-passthrough: "true"
           kubernetes.digitalocean.com/load-balancer-id: "8a5390bf-27da-4216-8602-857f2c77dbff"
           service.kubernetes.io/do-loadbalancer-disown: false
-      config:
-        use-proxy-protocol: "true"
