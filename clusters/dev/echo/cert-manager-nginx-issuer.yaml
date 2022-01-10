@@ -1,6 +1,6 @@
 ---
 apiVersion: cert-manager.io/v1
-kind: Issuer
+kind: ClusterIssuer
 metadata:
   name: letsencrypt-nginx
   namespace: echo
@@ -12,6 +12,7 @@ spec:
   acme:
     email: atley.xyz@gmail.com
     server: https://acme-v02.api.letsencrypt.org/directory
+    preferredChain: "ISRG Root X1"
     privateKeySecretRef:
       name: letsencrypt-nginx-private-key
     solvers:
