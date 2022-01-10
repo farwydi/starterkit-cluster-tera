@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: quote
-  namespace: backend
+  namespace: quote
 spec:
   replicas: 1
   selector:
